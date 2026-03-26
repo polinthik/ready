@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=2.0">
+    <title>Генерация пароля</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cyber-bg"></div>
+<div class="grid-overlay"></div>
+<div class="scan-lines"></div>
+<div class="noise"></div>
+
+<main class="container">
+    <h1 class="neon-title" style="font-size: 2.5rem;">
+        <i class="fas fa-cogs"></i> ГЕНЕРАЦИЯ ПАРОЛЯ
+    </h1>
+
+    <div class="generator-panel">
+        <div class="param-nogroup">
+            <label>Длина пароля (4-32):</label>
+            <input type="number" id="length" min="4" max="32" value="12">
+        </div>
+
+        <div class="param-group">
+            <input type="checkbox" id="useUpper" checked>
+            <label for="useUpper">Прописные буквы (A-Z)</label>
+    
+            <input type="checkbox" id="useLower" checked>
+            <label for="useLower">Строчные буквы (a-z)</label>
+    
+            <input type="checkbox" id="useDigits" checked>
+            <label for="useDigits">Цифры (0-9)</label>
+    
+            <input type="checkbox" id="useSpecial">
+            <label for="useSpecial">Спецсимволы (!@#$%^&*)</label>
+        </div>
+
+        <button class="cyber-btn" id="generateBtn"><i class="fas fa-sync-alt"></i> Сгенерировать</button>
+
+        <div class="result-area">
+            <div class="result-label">Ваш пароль:</div>
+            <div class="password-display" id="passwordResult">••••••••</div>
+            <button class="copy-btn" id="copyBtn"><i class="fas fa-copy"></i> Копировать</button>
+        </div>
+    </div>
+    <ul class="glitch-list">
+        <li><i class="fas fa-check"></i> <strong>Проект создан в рамках краевого кейс-турнира по программированию "Код ИТ" 2026.</strong></li>
+        <li><i class="fas fa-check"></i> <strong>Командой Solo creating 2.0</strong></li>
+    </ul>
+</main>
+
+<footer class="cyber-footer">
+    <div>© 2026 Генератор и оценщик паролей</div>
+    <div class="footer-note">Безопасность в ваших руках</div>
+</footer>
+<a href="index.html" class="back-link-fixed"><i class="fas fa-arrow-left"></i> Назад</a>
+
+<script src="script.js"></script>
+</body>
+</html>
